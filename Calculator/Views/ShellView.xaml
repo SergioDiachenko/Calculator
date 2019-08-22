@@ -1,0 +1,69 @@
+﻿<Window x:Class="Calculator.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator.Views"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:cal="http://www.caliburnproject.org"
+        mc:Ignorable="d" FontSize="24"
+        Title="{Binding Path=DisplayTitle, Mode=OneWay}" Height="600" Width="350"
+        WindowStartupLocation="CenterScreen"
+        Background="#110F0E">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+        <!-- Row 1 -->
+        <TextBlock Grid.Row="1" Grid.Column="1" x:Name="Screen" Grid.ColumnSpan="4" 
+                   Background="#1C1C1C" Margin="5" TextAlignment="Right" FontSize="48" Foreground="White"></TextBlock>
+
+        <!-- Row 2 -->
+        <Button x:Name="Clear" Grid.Row="2" Grid.Column="1" Margin="5">C</Button>
+        <Button x:Name="ChangeArithmeticSign" Grid.Row="2" Grid.Column="2" Margin="5">+/-</Button>
+        <Button x:Name="PercentageEntry" Grid.Row="2" Grid.Column="3" Margin="5">%</Button>
+        <Button x:Name="Divide" Grid.Row="2" Grid.Column="4" Margin="5" Background="#FF941C">/</Button>
+
+        <!-- Row 3 -->
+        <Button x:Name="PressSeven" Grid.Row="3" Grid.Column="1" Margin="5">7</Button>
+        <Button x:Name="PressEight" Grid.Row="3" Grid.Column="2" Margin="5">8</Button>
+        <Button x:Name="PressNine" Grid.Row="3" Grid.Column="3" Margin="5">9</Button>
+        <Button x:Name="Multiply" Grid.Row="3" Grid.Column="4" Margin="5" Background="#FF941C">x</Button>
+
+        <!-- Row 4 -->
+        <Button x:Name="PressFour" Grid.Row="4" Grid.Column="1" Margin="5">4</Button>
+        <Button x:Name="PressFive" Grid.Row="4" Grid.Column="2" Margin="5">5</Button>
+        <Button x:Name="PressSix" Grid.Row="4" Grid.Column="3" Margin="5">6</Button>
+        <Button x:Name="Substract" Grid.Row="4" Grid.Column="4" Margin="5" Background="#FF941C">-</Button>
+
+        <!-- Row 5 -->
+        <Button x:Name="PressOne" Grid.Row="5" Grid.Column="1" Margin="5">1</Button>
+        <Button x:Name="PressTwo" Grid.Row="5" Grid.Column="2" Margin="5">2</Button>
+        <Button x:Name="PressThree" Grid.Row="5" Grid.Column="3" Margin="5">3</Button>
+        <Button x:Name="Add" Grid.Row="5" Grid.Column="4" Margin="5" Background="#FF941C">+</Button>
+        
+        <!-- Row 6 -->
+        <Button x:Name="PressZero" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"  Margin="5">0</Button>
+        <Button x:Name="PressComma" Grid.Row="6" Grid.Column="3" Margin="5">,</Button>
+        <Button x:Name="ShowResult" Grid.Row="6" Grid.Column="4" Margin="5" Background="#FF941C" Content="="></Button>
+
+
+    </Grid>
+</Window>
